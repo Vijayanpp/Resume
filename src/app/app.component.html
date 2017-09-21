@@ -1,3 +1,32 @@
-<h1>
-  {{title}}
-</h1>
+<div id="show" class="btn-floating waves-effect waves-light btn-large brand-text">
+    <i class="fa fa-cloud-upload"></i>
+</div>
+<!-- Main Container -->
+<main id="app" class="main-section">
+  <!-- header navigation start -->
+ <app-header></app-header>
+  <!-- #header  navigation end -->
+
+ 
+
+  <!-- About Section start -->
+  <section id="about" class="scroll-section root-sec padd-tb-140 grey lighten-5 blogpage-posts-wrap">
+    <div class="container">
+      <div class="row">
+       
+        <router-outlet></router-outlet>
+          
+      </div>
+    </div>
+    <!-- .container end -->
+  </section>
+  <!-- #about Section end -->
+
+ 
+
+  <!-- Footer Section end -->
+  <app-footer></app-footer>
+  <!-- #footer end -->
+
+</main>
+<!-- Main Container end-->

@@ -1,0 +1,24 @@
+<article class="col-sm-6 col-md-4 single-card-box single-post">
+  <div class="card wow fadeInUpSmall" data-wow-duration=".7s">
+    <div class="card-image">
+      <div class="card-img-wrap">
+        <div class="blog-post-thumb waves-effect waves-block waves-light">
+          <a href="#"><img class="activator" src="{{person.profileUrl}}" alt="">
+          </a>
+        </div>
+
+        <div class="post-body">
+            <div class='experience' [ngClass]="person.favouriteColor">{{person.experience}} <span class='small-font'>Yr</span></div>
+          <a href="#" class="brand-text"><h2 class="post-title text-center"><strong>{{person.name}}</strong></h2></a>
+         <h5>{{person.currentRole}}</h5>
+          <p class="post-content">{{person.description}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix card-content">
+      <a href="#" class="left js-favorite rose" title="Love this"><i class="mdi-action-favorite"></i><span class="numb">{{person.like}}</span></a>
+<a href="{{person.downloadUrl}}"   class="left js-favorite greens" title="Download Resume"><i class="mdi-file-cloud-download"></i></a>
+      <a routerLink="/portfolio" class="brand-text right waves-effect">View</a>
+    </div>
+  </div>
+</article>
