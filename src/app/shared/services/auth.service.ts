@@ -8,7 +8,7 @@ export class AuthService {
   private authState: Observable<firebase.User>;
   private currentUser: firebase.User = null;
 
-constructor(public afAuth: AngularFireAuth) {
+  constructor(public afAuth: AngularFireAuth) {
     this.authState = this.afAuth.authState;
     this.authState.subscribe(user => {
       if (user) {
@@ -24,7 +24,10 @@ constructor(public afAuth: AngularFireAuth) {
   }
 
   loginWithGoogle() {
-  return this.afAuth.auth.signInWithPopup(
-    new firebase.auth.GoogleAuthProvider());
-}
+    return this.afAuth.auth.signInWithPopup(
+      new firebase.auth.GoogleAuthProvider());
+  }
+    logout() {
+    this.afAuth.auth.signOut();
+  }
 }

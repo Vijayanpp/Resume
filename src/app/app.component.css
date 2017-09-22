@@ -11,5 +11,6 @@
 }
 #main
 {
-    height: 80vh;
+    height:auto;
+    min-height: 90vh;
 }

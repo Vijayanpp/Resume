@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthService } from '../../shared/';
 @Component({
   selector: 'app-socialmedialogin',
   templateUrl: './socialmedialogin.component.html',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SocialmedialoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private auth: AuthService) { }
 
   ngOnInit() {
+  }
+
+  googleAuthentication()
+  {
+    this.auth.loginWithGoogle();
   }
 
 }

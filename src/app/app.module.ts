@@ -19,6 +19,7 @@ import { AllresumesComponent } from './components/allresumes/allresumes.componen
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { appServices } from './app.include';
 import { SocialmedialoginComponent } from './components/socialmedialogin/socialmedialogin.component';
+import { CandidatedashboardComponent } from './components/candidatedashboard/candidatedashboard.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SocialmedialoginComponent } from './components/socialmedialogin/socialm
     FooterComponent,
     AllresumesComponent,
     PortfolioComponent,
-    SocialmedialoginComponent
+    SocialmedialoginComponent,
+    CandidatedashboardComponent
   ],
   imports: [
     BrowserModule,
