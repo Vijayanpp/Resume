@@ -18,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AllresumesComponent } from './components/allresumes/allresumes.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { appServices } from './app.include';
+import { SocialmedialoginComponent } from './components/socialmedialogin/socialmedialogin.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { appServices } from './app.include';
     HeaderComponent,
     FooterComponent,
     AllresumesComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    SocialmedialoginComponent
   ],
   imports: [
     BrowserModule,
