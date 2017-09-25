@@ -1,6 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald|Open+Sans:400,300);
 
-
-.social-container {
+.social-container,.head-text {
     display: -webkit-flex;
     display: flex;
     width: 100%;    
@@ -10,12 +10,66 @@
 
 }
 
-.social-item {
+.animation-text
+{
+    text-align: center;
+    background: -webkit-linear-gradient(left, #002E03, #8EE809, #002E03);
+    background-size: 1600px 200px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation-duration: 10s;
+            animation-duration: 10s;
+    -webkit-animation-name: animationgradienttitle;
+            animation-name: animationgradienttitle;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+.head-text h1
+{
+    font-size:3em;
+    font-weight: 400;
+
+}
+
+.logo
+{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.social-item{
     background-color: cornflowerblue;
     width:150px;
     height:150px;
     margin: 10px;    
+ 
+}
+@media (max-width:766px)
+{
+    .social-item{
+    width:60px;
+    height: 60px;
+    }
+    .social-item i
+    {
+        font-size:1em!important;
+        margin-top:2%!important;
+    }
+}
 
+@media (max-width:359px)
+{
+    .social-item{
+    width:50px;
+    height: 50px;
+    }
+    .social-item i
+    {
+        font-size:1em!important;
+        margin-top:-5%!important;
+    }
 }
 .heading
 {
@@ -34,3 +88,71 @@
 {
     background:#6ee1e7;
 }
+
+
+.lines-on-sides, h2 {
+  display: table;
+  text-align: center;
+  white-space: nowrap;
+}
+.lines-on-sides:after, h2:after, .lines-on-sides:before, h2:before {
+  content: '';
+  display: table-cell;
+  width: 50%;
+  background: -webkit-linear-gradient(transparent 50%, currentColor 50%, currentColor calc(50% + 1px), transparent calc(50% + 1px));
+  background: linear-gradient(transparent 50%, currentColor 50%, currentColor calc(50% + 1px), transparent calc(50% + 1px));
+  background-clip: padding;
+}
+.lines-on-sides:after, h2:after {
+  border-left: 1em solid transparent;
+}
+.lines-on-sides:before, h2:before {
+  border-right: 1em solid transparent;
+}
+
+h2 {
+  font-size: 1.5em;
+  color: #f0cca8;
+}
+
+h3 {
+  font-size: 1em;
+  color: #04790d;
+}
+
+/* PAGE STYLES */
+* {
+  box-sizing: border-box;
+}
+
+
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3em;
+  color: #04790d;
+}
+
+
+@-webkit-keyframes animationgradienttitle {
+    0% {
+      background-position: 0 1600px;
+    }
+    100% {
+      background-position: 1600px 0;
+    }
+  }
+  @keyframes animationgradienttitle {
+    0% {
+      background-position: 0 1600px;
+    }
+    100% {
+      background-position: 1600px 0;
+    }
+  }

@@ -5,8 +5,8 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class AuthService {
-  private authState: Observable<firebase.User>;
-  private currentUser: firebase.User = null;
+  public authState: Observable<firebase.User>;
+  public currentUser: firebase.User = null;
 
   constructor(public afAuth: AngularFireAuth) {
     this.authState = this.afAuth.authState;
@@ -23,11 +23,17 @@ export class AuthService {
     return this.authState;
   }
 
+  /**
+   * Login with google account
+   */
+
   loginWithGoogle() {
     return this.afAuth.auth.signInWithPopup(
       new firebase.auth.GoogleAuthProvider());
   }
-    logout() {
+  
+  logout() {
+    alert('hi')
     this.afAuth.auth.signOut();
   }
 }

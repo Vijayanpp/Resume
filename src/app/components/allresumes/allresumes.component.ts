@@ -17,10 +17,18 @@ export class AllresumesComponent implements OnInit {
   constructor(private auth: AuthService, public db: AngularFireDatabase) { }
 
   ngOnInit() {
-    this.auth.getAuthState().subscribe(
-      (user) => this.user = user);
+    this.auth.getAuthState().subscribe((user) => {
+      console.log(user);
+    });
   this.candidates = this.db.list('/candidates');
-
+  console.log(this.auth);
+  }
+  ngAfterViewInit() {
+    this.auth.getAuthState().subscribe((user) => {
+      console.log(user);
+    });
+  this.candidates = this.db.list('/candidates');
+  console.log(this.auth);
   }
 
 }
